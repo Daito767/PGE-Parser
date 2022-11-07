@@ -139,7 +139,7 @@ class SpreadSheetAPI:
 
 		for col_name in column_names:
 			if col_name not in self.equivalent_pge_column_names.keys():
-				values.append('')
+				values.append(None)
 				continue
 
 			value = None

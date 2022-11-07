@@ -88,6 +88,7 @@ class Program:
 
             if not sap_id.isnumeric():
                 n += 1
+                continue
 
             general_data = self.parser.collect_general_pole_data(sap_id)
             inspection_data = self.parser.collect_inspection_pole_data(sap_id)
@@ -96,7 +97,6 @@ class Program:
             self.sheet_api.populate_pole(self.sheet_id, f'C{n + 1}:S{n + 1}', general_data, inspection_data, needed_data[0])
 
             n += 1
-
 
 if __name__ == '__main__':
     program = Program()
